@@ -5,7 +5,7 @@ const Articles = ({articles}) => {
         <>
             {articles.map(article => 
                 <div key={article.slug}>
-                    <div>{article.author.username} <img src={article.author.image}/></div>
+                    <div>{article.author.username} <img alt={article.author.username} src={article.author.image}/></div>
                     <div>Title : {article.title}</div>
                     <div>favoritesCount : {article.favoritesCount}</div>
                     <div>favorite : {article.favorited? 'true' : 'false'}</div>
