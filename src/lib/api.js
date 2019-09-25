@@ -1,3 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
-export const getArticleList = () => axios.get('https://conduit.productionready.io/api/articles');
+export const getArticleList = () =>
+  axios.get("https://conduit.productionready.io/api/articles");
