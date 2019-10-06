@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Articles from "../components/Articles";
-import { connect } from "react-redux";
-import { getArticles } from "../modules/articles";
+import React, { Component } from 'react';
+import Articles from '../components/Articles';
+import { connect } from 'react-redux';
+import { getArticles } from '../modules/articles';
 
 class AritclesContainer extends Component {
   componentDidMount() {
@@ -19,16 +19,16 @@ class AritclesContainer extends Component {
   }
 }
 const mapStateToProps = state => ({
-  articles: state.articles.articles
+  articles: state.articles.articles,
 });
 
 const mapToDispatch = dispatch => ({
   getArticles: () => {
     dispatch(getArticles);
-  }
+  },
 });
 
 export default connect(
   mapStateToProps,
-  mapToDispatch
+  mapToDispatch,
 )(AritclesContainer);
